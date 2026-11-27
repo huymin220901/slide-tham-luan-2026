@@ -177,3 +177,4 @@ body.static .slide{transition:none}
 #loader .lt{font:600 14px/1 "Be Vietnam Pro",sans-serif;letter-spacing:.2em;color:#f3c653}
 #loader .lb{width:min(320px,60vw);height:3px;background:rgba(243,198,83,.2);border-radius:2px;overflow:hidden}
 #loader .lb i{display:block;height:100%;width:0;background:#f3c653;transition:width .2s ease}
+.band.mid{justify-content:center;padding-left:0}
