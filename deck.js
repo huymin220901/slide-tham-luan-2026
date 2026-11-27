@@ -64,10 +64,11 @@ slides.forEach((s, i) => {
 
 /* --- Co giãn vừa cửa sổ --- */
 function fit() {
-  const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+  const W = document.documentElement.clientWidth || innerWidth, H = document.documentElement.clientHeight || innerHeight;
+  const s = Math.min(W / 1920, H / 1080);
   stage.style.transform = `translate(-50%,-50%) scale(${s})`;
 }
-addEventListener('resize', fit); fit();
+addEventListener('resize', fit); addEventListener('orientationchange', () => setTimeout(fit, 200)); fit();
 
 /* --- Chuyển slide --- */
 const hud = document.getElementById('hud'), bar = document.getElementById('bar');

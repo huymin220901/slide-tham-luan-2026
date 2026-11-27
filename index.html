@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,900;1,700&family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <style>
 /* Chi tiết riêng của một vài slide */
 .rule{display:flex;align-items:center;gap:10px;width:230px;height:14px}
@@ -516,13 +516,16 @@
   <img class="el" data-a="drop" data-d=".2" src="assets/badge.png" alt="Huy hiệu" style="left:883px;top:133px;width:154px;height:175px">
   <div class="el mont c sh-lg" data-a="zoom" data-d=".7" style="left:160px;top:366px;width:1600px"><span class="t-gold" style="font-weight:800;font-size:104px;line-height:1.22">XIN TRÂN TRỌNG CẢM ƠN!</span></div>
   <div class="el stars" data-a="wipe" data-d="1.2" style="left:580px;top:517px;width:760px"></div>
-  <div class="el pf c sh-sm" data-a="up" data-d="1.5" style="left:310px;top:595px;width:1300px"><span class="t-pale" style="font-weight:700;font-style:italic;font-size:38px;line-height:1.35">Kính chúc các đồng chí lãnh đạo, các đồng chí đại biểu sức khỏe, <br>hạnh phúc và thành công</span></div>
-  <div class="el c up" data-a="fade" data-d="2" style="left:160px;top:721px;width:1600px;font:600 26px/1.3 'Be Vietnam Pro';letter-spacing:.08em">CHÚC HỘI NGHỊ THÀNH CÔNG TỐT ĐẸP!</div>
+  <!-- Hai dòng chúc xếp chồng trong một khối: dòng dưới luôn nằm sau dòng trên, không bị đè dù chữ xuống dòng khác nhau trên từng máy -->
+  <div class="el c" style="left:160px;top:595px;width:1600px;display:flex;flex-direction:column;align-items:center;gap:20px">
+    <div class="pf sh-sm" data-a="up" data-d="1.5" style="max-width:1300px"><span class="t-pale" style="font-weight:700;font-style:italic;font-size:38px;line-height:1.35">Kính chúc các đồng chí lãnh đạo, các đồng chí đại biểu sức khỏe, <br>hạnh phúc và thành công</span></div>
+    <div class="up" data-a="fade" data-d="2" style="font:600 26px/1.3 'Be Vietnam Pro';letter-spacing:.08em">CHÚC HỘI NGHỊ THÀNH CÔNG TỐT ĐẸP!</div>
+  </div>
 </section>
 
 </div>
 <div id="loader"><div class="lt">ĐANG TẢI BẢN TRÌNH CHIẾU</div><div class="lb"><i></i></div></div>
 <div id="hud"></div><div id="bar"></div>
-<script src="deck.js?v=3"></script>
+<script src="deck.js?v=4"></script>
 </body>
 </html>
