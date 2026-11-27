@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Giải pháp nâng cao chất lượng huấn luyện, diễn tập sát thực tế tác chiến</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,900;1,700&family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Chi tiết riêng của một vài slide */
+.rule{display:flex;align-items:center;gap:10px;width:230px;height:14px}
+.rule i{display:block;height:2px}
+.rule b{display:block;width:12px;height:12px;transform:rotate(45deg) scale(.8);background:var(--g1h)}
+.pill{height:47px;display:flex;align-items:center;gap:10px;padding:0 22px 0 17px;border-radius:24px;background:#5a0303;border:1.5px solid #e9bf5c;color:#f2c661;font:700 18px/1 "Be Vietnam Pro";letter-spacing:.1em}
+.pill svg{width:24px;height:24px}
+.pill span{background:var(--pale);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ornament{width:420px;height:20px}
+.ornament::before,.ornament::after{content:"";position:absolute;top:9px;width:170px;height:2px}
+.ornament::before{left:0;background:linear-gradient(90deg,rgba(243,198,83,0),#f3c653)}
+.ornament::after{right:0;background:linear-gradient(90deg,#f3c653,rgba(243,198,83,0))}
+.ornament i{position:absolute;top:0;width:10px;height:10px;background:#f3c653;transform:translateY(5px) rotate(45deg)}
+.ornament b{position:absolute;left:200px;top:0;width:20px;height:20px;background:var(--g1h);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.inforow{width:984px;height:59px;padding-left:24px;border-left:4px solid #f3c653}
+.inforow .k{font:700 16px/1.25 Montserrat;letter-spacing:.18em;color:var(--gold)}
+.inforow .v{margin-top:6px;font:500 26px/1.25 "Be Vietnam Pro";opacity:.92;white-space:nowrap}
+.cmp{width:760px;height:600px;border-radius:16px}
+.cmp .head{position:absolute;top:-41px;left:50%;transform:translateX(-50%);height:82px;display:flex;align-items:center;gap:20px;padding:0 34px 0 27px;border-radius:80px;font:700 30px/1 "Be Vietnam Pro";letter-spacing:.06em;white-space:nowrap}
+.cmp .head svg{width:44px;height:44px}
+.chead{height:82px;display:flex;align-items:center;gap:20px;padding:0 34px 0 27px;border-radius:80px;font:700 30px/1 "Be Vietnam Pro";letter-spacing:.06em;white-space:nowrap}
+.chead svg{width:44px;height:44px}
+.cmp .row{position:absolute;display:flex;gap:16px;font-size:30px;line-height:1.35}
+.cmp .row svg,.cmp .row img{flex:none;width:32px;height:32px;margin-top:5px}
+.corner{background:#f3c653}
+.dash{background:none}
+.block{border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--red)}
+.block .k{font:800 30px/1.25 Montserrat}
+.block .v{display:flex;align-items:center;gap:16px;font:700 30px/1.25 "Be Vietnam Pro"}
+.block .v svg{width:20px;height:16px}
+.portrait{border-radius:230px 230px 0 0}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- =====================================================
+     01 · BÌA
+     ===================================================== -->
+<section class="slide">
+  <div class="bg" style="background-image:url(assets/nen1.jpg)"></div>
+  <div class="bg kb" style="background-image:url(assets/img_s1.jpg);opacity:.22"></div>
+  <div class="el" style="left:0;top:660px;width:1920px;height:420px;background:linear-gradient(180deg,rgba(90,3,3,0),rgba(90,3,3,.75))"></div>
+  <div class="el" data-a="fade" data-d="0" style="left:28px;top:28px;width:1864px;height:1024px;border:1.5px solid rgba(233,191,92,.55)"></div>
+  <div class="el breathe" style="left:520px;top:-140px;width:880px;height:600px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,219,128,.45),rgba(255,219,128,0))"></div>
+
+  <img class="el" data-a="drop" data-d=".2" src="assets/badge.png" alt="Huy hiệu" style="left:890px;top:65px;width:140px;height:159px">
+
+  <div class="el c" data-a="up" data-d=".6" style="left:0;top:240px;width:1920px">
+    <div class="t-pale sh-sm" style="display:inline-block;font:700 26px/1.27 'Be Vietnam Pro';letter-spacing:.08em">BỘ TƯ LỆNH CẢNH SÁT CƠ ĐỘNG</div><br>
+    <div class="t-gold sh-sm" style="display:inline-block;margin-top:16px;font:700 22px/1.27 'Be Vietnam Pro';letter-spacing:.08em">ĐOÀN CẢNH SÁT ĐẶC NHIỆM SỐ 1</div>
+  </div>
+
+  <div class="el" data-a="wipe" data-d=".9" style="left:370px;top:353px;width:1181px;height:33px;display:flex;align-items:center;gap:16px">
+    <div class="rule"><i style="width:140px;background:linear-gradient(90deg,rgba(246,208,106,0),#f6d06a)"></i><b></b><i style="width:56px;background:var(--g1h)"></i></div>
+    <div class="t-pale sh-sm nw" style="font:700 26px/1.27 'Be Vietnam Pro';letter-spacing:.12em">THAM LUẬN HỘI NGHỊ TỔNG KẾT CÔNG TÁC</div>
+    <div class="rule"><i style="width:56px;background:var(--g1h)"></i><b></b><i style="width:140px;background:linear-gradient(90deg,#f6d06a,rgba(246,208,106,0))"></i></div>
+  </div>
+
+  <div class="el mont c sh-lg" data-a="zoom" data-d="1.2" style="left:28px;top:402px;width:1864px">
+    <div class="t-gold" style="font-weight:800;font-size:62px;line-height:1.18;letter-spacing:.01em">GIẢI PHÁP NÂNG CAO CHẤT LƯỢNG HUẤN LUYỆN,<br>DIỄN TẬP SÁT THỰC TẾ TÁC CHIẾN</div>
+  </div>
+
+  <div class="el c tnr sh-sm" data-a="up" data-d="1.7" style="left:28px;top:564px;width:1864px">
+    <span class="t-pale" style="font-weight:700;font-style:italic;font-size:40px;line-height:1.3">Theo chức năng, nhiệm vụ của lực lượng Cảnh sát đặc nhiệm</span>
+  </div>
+
+  <div class="el" style="left:659px;top:658px;display:flex;gap:14px">
+    <div class="pill" data-a="pop" data-d="2.1" data-icon="target"><span>HUẤN LUYỆN</span></div>
+    <div class="pill" data-a="pop" data-d="2.25" data-icon="shuffle"><span>DIỄN TẬP</span></div>
+    <div class="pill" data-a="pop" data-d="2.4" data-icon="shieldPlain"><span>TÁC CHIẾN</span></div>
+  </div>
+
+  <div class="el c" data-a="fade" data-d="2.7" style="left:0;top:974px;width:1920px;font:600 24px/1.25 'Be Vietnam Pro';letter-spacing:.14em;color:#fff;opacity:.75">Hà Nội, ngày 12 tháng 12 năm 2026</div>
+</section>
+
+<!-- =====================================================
+     02 · NGƯỜI TRÌNH BÀY
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="mo-dau">
+  <div class="bg" style="background-image:url(assets/nenB.jpg)"></div>
+  <div class="bg kb" style="background-image:url(assets/img_7ac.jpg);opacity:.16"></div>
+  <div class="el dots" style="left:64px;top:126px"></div>
+  <div class="el dots" style="left:1700px;top:870px"></div>
+
+  <div class="el halo breathe" style="left:100px;top:200px;width:620px;height:620px;background:radial-gradient(closest-side,rgba(251,227,154,.35),rgba(243,198,83,0))"></div>
+  <!-- Khung chân dung: muốn chèn ảnh, thay khối "portrait-photo" bằng <img src="assets/ten-anh.jpg" ...> -->
+  <div class="el" data-a="up" data-d=".2" style="left:180px;top:200px;width:460px;height:600px">
+    <div class="el portrait" style="inset:0;border:4px solid #f3c653"></div>
+    <div class="el portrait portrait-photo" style="left:14px;top:14px;width:432px;height:572px;border-radius:216px 216px 0 0;background:linear-gradient(180deg,#a40505,#7a0a0f)"></div>
+    <div class="el" style="left:24px;top:24px;width:412px;height:552px;border:1px solid rgba(251,227,154,.55);border-radius:206px 206px 0 0"></div>
+    <svg class="el" style="left:120px;top:210px;width:220px;height:220px;opacity:.3" viewBox="0 0 220 220" fill="none" stroke="#f3c653" stroke-width="12" stroke-linecap="round"><circle cx="110" cy="80" r="40"/><path d="M48 186c0-42 28-64 62-64s62 22 62 64"/></svg>
+    <div class="el mont" style="left:148px;top:470px;font-weight:700;font-size:14px;letter-spacing:.2em;opacity:.55">ẢNH CHÂN DUNG</div>
+  </div>
+  <div class="el mont" data-a="up" data-d=".6" style="left:215px;top:776px;width:391px;height:48px;border-radius:4px;background:linear-gradient(90deg,#fbe39a,#f3c653);box-shadow:0 8px 20px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;gap:12px;color:#7a0a0f;font-weight:800;font-size:16px;letter-spacing:.16em">
+    <span>★</span><span>Trung tá Nguyễn Văn Giáp</span><span>★</span>
+  </div>
+
+  <div class="el" data-a="left" data-d=".8" style="left:740px;top:277px;display:flex;align-items:center;gap:16px">
+    <i style="display:block;width:56px;height:3px;background:linear-gradient(90deg,#fbe39a,#f3c653)"></i>
+    <span class="mont" style="font-weight:700;font-size:20px;letter-spacing:.22em;color:#f3c653">BÁO CÁO VIÊN</span>
+  </div>
+  <div class="el mont sh-lg" data-a="left" data-d="1" style="left:740px;top:323px;width:1000px">
+    <span class="t-gold" style="font-weight:800;font-size:76px;line-height:1.1">Nguyễn Văn Giáp</span>
+  </div>
+  <div class="el" data-a="left" data-d="1.2" style="left:740px;top:429px;font:600 36px/1.27 'Be Vietnam Pro'">Cấp bậc: Trung tá · Chức vụ: Đội trưởng Đội 5</div>
+  <div class="el ornament" data-a="wipe" data-d="1.4" style="left:740px;top:497px"><i style="left:182px"></i><b></b><i style="left:229px"></i></div>
+  <div class="el inforow" data-a="up" data-d="1.6" style="left:740px;top:539px">
+    <div class="k">ĐƠN VỊ CÔNG TÁC</div>
+    <div class="v">Đoàn Cảnh sát đặc nhiệm số 1 – Bộ Tư lệnh Cảnh sát cơ động</div>
+  </div>
+  <div class="el inforow" data-a="up" data-d="1.8" style="left:740px;top:620px">
+    <div class="k">CHỦ ĐỀ THAM LUẬN</div>
+    <div class="v">Giải pháp nâng cao chất lượng huấn luyện, diễn tập sát thực tế tác chiến</div>
+  </div>
+</section>
+
+<!-- =====================================================
+     03 · ĐẶT VẤN ĐỀ
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="mo-dau">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_22c.jpg);opacity:.16"></div>
+  <div class="el halo breathe" style="left:1180px;top:160px;width:900px;height:900px;opacity:.5"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">ĐẶT VẤN ĐỀ</span>
+    <span class="tt t-gold sh-lg">HUẤN LUYỆN, DIỄN TẬP – NHIỆM VỤ THEN CHỐT</span>
+  </div>
+  <div class="el" data-a="up" style="left:100px;top:250px;width:1080px;font:600 40px/1.4 'Be Vietnam Pro'">Huấn luyện và diễn tập trực tiếp quyết định khả năng sẵn sàng chiến đấu và hiệu quả thực hiện nhiệm vụ của lực lượng Cảnh sát đặc nhiệm.</div>
+
+  <div class="el band" data-a="wipe" data-d="1" data-icon="target" style="top:470px"><span>HUẤN LUYỆN PHẢI LUÔN ĐI TRƯỚC MỘT BƯỚC</span></div>
+  <!-- Ảnh chiến sĩ nằm trên băng vàng; lớp ngoài chạy hiệu ứng vào, lớp trong lơ lửng -->
+  <div class="el" data-a="right" data-d=".5" style="left:1200px;top:200px;width:660px;height:880px"><img class="el float" src="assets/soldier3.png" alt="" style="inset:0;width:100%;height:100%"></div>
+
+  <div class="el" data-a="fade" data-d="1.5" style="left:100px;top:600px;font:500 22px/1.27 'Be Vietnam Pro'">Yêu cầu đối với cán bộ, chiến sĩ trước những tình huống phức tạp, đột xuất</div>
+  <div class="el cell" data-a="up" data-d="1.7" style="left:100px;top:640px;width:270px;height:187px"><div class="n mont t-gold">01</div><div class="t">Giỏi chuyên môn</div></div>
+  <div class="el cell" data-a="up" data-d="1.85" style="left:390px;top:640px;width:270px;height:187px"><div class="n mont t-gold">02</div><div class="t">Vững bản lĩnh</div></div>
+  <div class="el cell" data-a="up" data-d="2" style="left:680px;top:640px;width:270px;height:187px"><div class="n mont t-gold">03</div><div class="t">Linh hoạt trong xử lý</div></div>
+  <div class="el cell" data-a="up" data-d="2.15" style="left:970px;top:640px;width:270px;height:187px"><div class="n mont t-gold">04</div><div class="t">Phối hợp<br>chặt chẽ</div></div>
+</section>
+
+<!-- =====================================================
+     04 · THÔNG ĐIỆP CỐT LÕI
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="mo-dau">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_ffa.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">THÔNG ĐIỆP CỐT LÕI</span>
+    <span class="tt t-gold sh-lg">KHÔNG PHẢI NHIỀU HƠN – MÀ LÀ ĐÚNG HƠN</span>
+  </div>
+
+  <div class="el cmp" data-a="left" data-d=".5" style="left:110px;top:280px;background:rgba(255,248,230,.07);border:1.5px solid rgba(255,248,230,.25)">
+    <div class="row" data-icon="x" style="left:58px;top:98px;font-weight:600;color:rgba(255,248,230,.55)"><span>Huấn luyện nhiều hơn</span></div>
+    <div class="row" data-icon="x" style="left:58px;top:179px;font-weight:600;color:rgba(255,248,230,.55)"><span>Diễn tập để hoàn thành kịch bản</span></div>
+  </div>
+
+  <!-- Nhãn "KHÔNG PHẢI" tách riêng để lớp kính mờ (blur) che được viền thẻ phía dưới -->
+  <div class="el chead" data-a="left" data-d=".5" data-icon="x" style="left:322px;top:239px;background:rgba(255,255,255,.24);border:3px solid rgba(255,255,255,.3);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);color:rgba(255,248,230,.85)"><span>KHÔNG PHẢI</span></div>
+  <div class="el" data-a="pop" data-d="1.1" data-icon="arrow" style="left:930px;top:548px;width:64px;height:64px;color:#f3c653"></div>
+
+  <div class="el cmp" data-a="right" data-d="1.4" style="left:1050px;top:280px;background:#fbf6ea;border:4px solid #f3c653;box-shadow:var(--glow)">
+    <div class="head" data-icon="tick" style="background:var(--pale);border:3px solid #fbe39a;color:var(--red)"><span>MÀ LÀ</span></div>
+    <div class="row" style="left:40px;top:96px;width:672px;font-weight:700;color:var(--red)"><img src="assets/star_bullet.png" alt=""><span>Huấn luyện đúng – trúng – sát thực tế</span></div>
+    <div class="row" style="left:40px;top:177px;width:672px;font-weight:700;color:var(--red)"><img src="assets/star_bullet.png" alt=""><span>Diễn tập để kiểm nghiệm năng lực chỉ huy, hiệp đồng và xử lý tình huống thực tế</span></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     05 · BỐ CỤC THAM LUẬN (MỤC LỤC)
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="mo-dau" data-prog-top="1025">
+  <div class="bg kb" style="background-image:url(assets/nenA.jpg)"></div>
+
+  <div class="el t-pale up" data-a="up" style="left:100px;top:258px;font:600 26px/1.3 'Be Vietnam Pro';letter-spacing:.1em">NỘI DUNG</div>
+  <div class="el pf sh-lg" data-a="zoom" style="left:100px;top:318px;width:560px">
+    <div class="t-gold" style="font-weight:900;font-size:150px;line-height:1.1;letter-spacing:.02em">THAM<br>LUẬN</div>
+  </div>
+  <div class="el stars" data-a="wipe" style="left:100px;top:674px;width:420px"></div>
+  <div class="el" data-a="up" style="left:100px;top:754px;width:560px;font:500 26px/1.45 'Be Vietnam Pro'">Năm phần trình bày, đi từ nhận diện yêu cầu đến giải pháp và quyết tâm hành động.</div>
+
+  <div class="el toc" data-a="right" data-d=".9" style="left:760px;top:210px;width:1060px"><span class="n">I</span><span class="t">Nhận diện những yêu cầu mới</span></div>
+  <div class="el toc" data-a="right" data-d="1.05" style="left:760px;top:352px;width:1060px"><span class="n">II</span><span class="t">Hạn chế, vấn đề cần quan tâm từ thực tiễn</span></div>
+  <div class="el toc" data-a="right" data-d="1.2" style="left:760px;top:494px;width:1060px"><span class="n">III</span><span class="t">07 nhóm giải pháp trọng tâm</span></div>
+  <div class="el toc" data-a="right" data-d="1.35" style="left:760px;top:636px;width:1060px"><span class="n">IV</span><span class="t">Một số kiến nghị, đề xuất</span></div>
+  <div class="el toc" data-a="right" data-d="1.5" style="left:760px;top:778px;width:1060px"><span class="n">V</span><span class="t">Quyết tâm thực hiện</span></div>
+</section>
+
+<!-- =====================================================
+     06 · BA YÊU CẦU MỚI
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="I">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_9a1.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">I. NHẬN DIỆN YÊU CẦU MỚI</span>
+    <span class="tt t-gold sh-lg">BA YÊU CẦU ĐẶT RA ĐỐI VỚI HUẤN LUYỆN, DIỄN TẬP</span>
+  </div>
+
+  <div class="el card cream" data-a="up" data-d=".5" style="left:100px;top:280px;width:550px;height:387px">
+    <div class="badge">01</div><div class="h">Xuất phát từ đặc điểm, yêu cầu nhiệm vụ</div><div class="p">Chuyển từ huấn luyện đơn lẻ sang huấn luyện tổng hợp, lấy yêu cầu thực tiễn làm trung tâm.</div>
+  </div>
+  <div class="el card cream" data-a="up" data-d=".7" style="left:690px;top:280px;width:550px;height:387px">
+    <div class="badge">02</div><div class="h">Lấy sát thực tế làm thước đo chất lượng</div><div class="p">Giá trị của diễn tập là phát hiện điểm yếu, những khâu còn lúng túng để kịp thời khắc phục.</div>
+  </div>
+  <div class="el card cream" data-a="up" data-d=".9" style="left:1280px;top:280px;width:550px;height:387px">
+    <div class="badge">03</div><div class="h">Coi trọng năng lực chỉ huy và hiệp đồng</div><div class="p">Thống nhất trong chỉ huy, thông suốt trong thông tin, chặt chẽ trong phối hợp.</div>
+  </div>
+  <img class="el" data-a="pop" data-d="1.2" src="assets/medal11989.jpg" alt="" style="clip-path:circle(73px at 88px 78px);left:484px;top:218px;width:176px;height:176px">
+  <img class="el" data-a="pop" data-d="1.35" src="assets/medal11992.jpg" alt="" style="clip-path:circle(73px at 88px 78px);left:1074px;top:218px;width:176px;height:176px">
+  <img class="el" data-a="pop" data-d="1.5" src="assets/medal11995.jpg" alt="" style="clip-path:circle(73px at 88px 78px);left:1664px;top:218px;width:176px;height:176px">
+
+  <div class="el band" data-a="wipe" data-d="1.8" data-icon="shield" style="top:830px"><span>LẤY NĂNG LỰC THỰC HIỆN NHIỆM VỤ LÀM TRUNG TÂM</span></div>
+</section>
+
+<!-- =====================================================
+     07 · CÂU NHẤN
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="I">
+  <div class="bg" style="background-image:url(assets/nenB.jpg)"></div>
+  <div class="bg kb" style="background-image:url(assets/img_22c.jpg);opacity:.16"></div>
+  <div class="el dots" style="left:64px;top:126px"></div>
+  <div class="el dots" style="left:1700px;top:870px"></div>
+
+  <!-- 4 góc khung -->
+  <div class="el" data-a="zoom" data-d=".1" style="left:253px;top:248px;width:1414px;height:565px">
+    <i class="el corner" style="left:0;top:0;width:24px;height:3px"></i><i class="el corner" style="left:0;top:0;width:3px;height:24px"></i>
+    <i class="el corner" style="right:0;top:0;width:24px;height:3px"></i><i class="el corner" style="right:0;top:0;width:3px;height:24px"></i>
+    <i class="el corner" style="left:0;bottom:0;width:24px;height:3px"></i><i class="el corner" style="left:0;bottom:0;width:3px;height:24px"></i>
+    <i class="el corner" style="right:0;bottom:0;width:24px;height:3px"></i><i class="el corner" style="right:0;bottom:0;width:3px;height:24px"></i>
+  </div>
+  <div class="el mont sh-lg" data-a="drop" data-d=".4" style="left:913px;top:255px;width:95px;height:150px"><span class="t-gold" style="font-weight:900;font-size:160px;line-height:150px">“</span></div>
+  <div class="el pf c sh-sm" data-a="up" data-d=".8" style="left:260px;top:433px;width:1400px">
+    <span class="t-pale" style="font-weight:700;font-style:italic;font-size:60px;line-height:1.3">Diễn tập không phải để chứng minh chúng ta đã làm tốt, mà để nhận diện những gì chưa tốt để <br>kịp thời hoàn thiện.</span>
+  </div>
+  <div class="el stars" data-a="wipe" data-d="1.6" style="left:680px;top:695px;width:560px"></div>
+  <div class="el c up" data-a="fade" data-d="2" style="left:260px;top:777px;width:1400px;font:600 22px/1.27 'Be Vietnam Pro';letter-spacing:.08em;opacity:.8">YÊU CẦU THỨ HAI · LẤY SÁT THỰC TẾ LÀM THƯỚC ĐO</div>
+</section>
+
+<!-- =====================================================
+     08 · NĂM HẠN CHẾ
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="II">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_8ad.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">II. HẠN CHẾ TỪ THỰC TIỄN</span>
+    <span class="tt t-gold sh-lg">NĂM VẤN ĐỀ CẦN NHÌN NHẬN THẲNG THẮN</span>
+  </div>
+
+  <div class="el toc" data-a="left" style="left:100px;top:238px;width:1140px"><span class="n">1</span><span class="t" style="font-size:30px">Nội dung huấn luyện có mặt chưa thật sát yêu cầu nhiệm vụ</span></div>
+  <div class="el toc" data-a="left" style="left:100px;top:354px;width:1140px"><span class="n">2</span><span class="t" style="font-size:30px">Tình huống diễn tập chưa đa dạng, thiếu yếu tố bất ngờ</span></div>
+  <div class="el toc" data-a="left" style="left:100px;top:470px;width:1140px"><span class="n">3</span><span class="t" style="font-size:30px">Chỉ huy, điều hành, hiệp đồng cần rèn luyện thường xuyên hơn</span></div>
+  <div class="el toc" data-a="left" style="left:100px;top:586px;width:1140px"><span class="n">4</span><span class="t" style="font-size:30px">Đội ngũ cán bộ huấn luyện chất lượng chưa đồng đều</span></div>
+  <div class="el toc" data-a="left" style="left:100px;top:702px;width:1140px"><span class="n">5</span><span class="t" style="font-size:30px">Cơ sở vật chất, thao trường, ứng dụng KHCN cần đầu tư, đổi mới</span></div>
+
+  <img class="el" data-a="right" data-d=".6" src="assets/photo8a.jpg" alt="" style="left:1290px;top:250px;width:530px;height:340px">
+  <img class="el" data-a="up" data-d="1" src="assets/photo8b.jpg" alt="" style="left:1290px;top:606px;width:257px;height:204px">
+  <img class="el" data-a="up" data-d="1.15" src="assets/photo8c.jpg" alt="" style="left:1563px;top:606px;width:257px;height:204px">
+
+  <div class="el band" data-a="wipe" data-d="1.6" data-icon="target" style="top:860px"><span>MỤC TIÊU: CHUYỂN BIẾN THỰC CHẤT VỀ NĂNG LỰC CHIẾN ĐẤU</span></div>
+</section>
+
+<!-- =====================================================
+     09 · BẢY NHÓM GIẢI PHÁP
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="III">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_7ac.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">III. GIẢI PHÁP TRỌNG TÂM</span>
+    <span class="tt t-gold sh-lg">BẢY NHÓM GIẢI PHÁP NÂNG CAO HIỆU QUẢ</span>
+  </div>
+
+  <div class="el cell row" data-a="pop" style="left:100px;top:250px;width:410px;height:203px"><div class="n mont t-gold">01</div><div style="color:#f3c653"><span data-icon="doc"></span><div class="t" style="color:var(--cream)">Đổi mới tư duy, nội dung, phương pháp huấn luyện</div></div></div>
+  <div class="el cell row" data-a="pop" style="left:534px;top:250px;width:410px;height:203px"><div class="n mont t-gold">02</div><div style="color:#f3c653"><span data-icon="target"></span><div class="t" style="color:var(--cream)">Nâng chất lượng phương án, tình huống diễn tập</div></div></div>
+  <div class="el cell row" data-a="pop" style="left:968px;top:250px;width:410px;height:203px"><div class="n mont t-gold">03</div><div style="color:#f3c653"><span data-icon="group"></span><div class="t" style="color:var(--cream)">Diễn tập tổng hợp, chỉ huy và hiệp đồng</div></div></div>
+  <div class="el cell row" data-a="pop" style="left:1402px;top:250px;width:410px;height:203px"><div class="n mont t-gold">04</div><div style="color:#f3c653"><span data-icon="person"></span><div class="t" style="color:var(--cream)">Xây dựng đội ngũ cán bộ huấn luyện</div></div></div>
+  <div class="el cell row" data-a="pop" style="left:317px;top:510px;width:410px;height:203px"><div class="n mont t-gold">05</div><div style="color:#f3c653"><span data-icon="check"></span><div class="t" style="color:var(--cream)">Đổi mới kiểm tra, đánh giá, rút kinh nghiệm</div></div></div>
+  <div class="el cell row" data-a="pop" style="left:751px;top:510px;width:410px;height:203px"><div class="n mont t-gold">06</div><div style="color:#f3c653"><span data-icon="vr"></span><div class="t" style="color:var(--cream)">Ứng dụng KHCN, hiện đại hóa điều kiện</div></div></div>
+  <div class="el cell row" data-a="pop" style="left:1185px;top:510px;width:410px;height:203px"><div class="n mont t-gold">07</div><div style="color:#f3c653"><span data-icon="shield"></span><div class="t" style="color:var(--cream)">Bảo đảm điều kiện, chiến sĩ toàn diện</div></div></div>
+
+  <div class="el band" data-a="wipe" data-d="1.6" data-icon="star" style="top:820px"><span>TRIỂN KHAI ĐỒNG BỘ – HIỆU QUẢ LÀ THƯỚC ĐO CAO NHẤT</span></div>
+</section>
+
+<!-- =====================================================
+     10 · GIẢI PHÁP 01 & 02
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="III">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_fc8.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">GIẢI PHÁP 01 &amp; 02</span>
+    <span class="tt t-gold sh-lg">ĐỔI MỚI NỘI DUNG – NÂNG CHẤT TÌNH HUỐNG</span>
+  </div>
+  <div class="el card cream" data-a="left" data-d=".5" style="left:100px;top:216px;width:840px;height:548px">
+    <div class="badge">01</div><div class="h">Đổi mới tư duy, nội dung và phương pháp<br>huấn luyện</div><div class="p">Lấy yêu cầu thực tiễn làm trung tâm, năng lực thực hiện nhiệm vụ làm thước đo. Huấn luyện cơ bản – chuyên sâu – tổng hợp; kết hợp lý thuyết với thực hành, kỹ thuật cá nhân với vận dụng thực tiễn.</div>
+  </div>
+  <div class="el card cream" data-a="right" data-d=".8" style="left:980px;top:216px;width:840px;height:548px">
+    <div class="badge">02</div><div class="h">Nâng cao chất lượng phương án, tình huống diễn tập</div><div class="p">Phương án sát thực tế, có tính dự báo. Đa dạng tình huống: phòng, chống khủng bố, giải cứu con tin, vụ việc phức tạp về ANTT; khắc phục lối diễn tập theo kịch bản định sẵn.</div>
+  </div>
+  <div class="el band" data-a="wipe" data-d="1.4" data-icon="clock" style="top:840px"><span>TĂNG KHẢ NĂNG THÍCH ỨNG TRƯỚC DIỄN BIẾN BẤT NGỜ</span></div>
+</section>
+
+<!-- =====================================================
+     11 · GIẢI PHÁP 03 & 04
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="III">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_9a1.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">GIẢI PHÁP 03 &amp; 04</span>
+    <span class="tt t-gold sh-lg">CHỈ HUY, HIỆP ĐỒNG – ĐỘI NGŨ HUẤN LUYỆN</span>
+  </div>
+  <div class="el card glass" data-a="left" data-d=".4" style="left:100px;top:240px;width:880px;height:307px">
+    <div class="badge">03</div><div class="h t-pale">Diễn tập tổng hợp, nâng cao chỉ huy và hiệp đồng</div><div class="p">Diễn tập giữa CSĐN với Công an địa phương, đơn vị nghiệp vụ; thống nhất cơ chế chỉ huy, thông tin, phân định trách nhiệm.</div>
+  </div>
+  <div class="el card glass" data-a="left" data-d=".6" style="left:100px;top:600px;width:880px;height:307px">
+    <div class="badge">04</div><div class="h t-pale">Xây dựng đội ngũ cán bộ huấn luyện có năng lực</div><div class="p">Chọn, bồi dưỡng cán bộ giỏi chuyên môn, giàu kinh nghiệm; gắn trách nhiệm người chỉ huy với chất lượng huấn luyện.</div>
+  </div>
+
+  <!-- Sơ đồ hiệp đồng: 3 đường nét đứt + 3 vòng tròn -->
+  <svg class="el" data-a="fade" data-d="1.3" style="left:1190px;top:360px;width:520px;height:322px;opacity:.8" viewBox="0 0 520 322" fill="none" stroke="#f3c653" stroke-width="3" stroke-dasharray="8 8"><path d="M261 1 1 321M259 1 519 321M0 320h520"/></svg>
+  <div class="el node gold" data-a="pop" data-d=".9" style="left:1330px;top:240px;width:240px;height:240px">CẢNH SÁT ĐẶC NHIỆM</div>
+  <div class="el node dark" data-a="pop" data-d="1.1" style="left:1070px;top:560px;width:240px;height:240px">CÔNG AN ĐỊA PHƯƠNG</div>
+  <div class="el node dark" data-a="pop" data-d="1.25" style="left:1590px;top:560px;width:240px;height:240px">ĐƠN VỊ NGHIỆP VỤ</div>
+  <div class="el pf c sh-sm" data-a="up" data-d="1.7" style="left:1070px;top:880px;width:760px"><span class="t-pale" style="font-weight:700;font-style:italic;font-size:30px;line-height:1.3">Chuyển hóa năng lực cá nhân thành sức mạnh tập thể</span></div>
+</section>
+
+<!-- =====================================================
+     12 · GIẢI PHÁP 05 – VÒNG CẢI TIẾN
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="III">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_22c.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">GIẢI PHÁP 05</span>
+    <span class="tt t-gold sh-lg">ĐỔI MỚI KIỂM TRA, ĐÁNH GIÁ, RÚT KINH NGHIỆM</span>
+  </div>
+
+  <div class="el" data-a="zoom" data-d=".3" style="left:310px;top:370px;width:460px;height:460px">
+    <div class="el spin" style="inset:0;border-radius:50%;border:3px dashed rgba(243,198,83,.7)"></div>
+  </div>
+  <div class="el mont c sh-lg" data-a="fade" data-d=".5" style="left:420px;top:564px;width:240px"><span class="t-gold" style="font-weight:800;font-size:30px;line-height:1.15">VÒNG<br>CẢI TIẾN</span></div>
+  <div class="el node gold" data-a="pop" data-d=".8" style="left:440px;top:270px;width:200px;height:200px;font-size:22px">HUẤN LUYỆN, DIỄN TẬP</div>
+  <div class="el node dark" data-a="pop" data-d="1" style="left:670px;top:500px;width:200px;height:200px;font-size:22px">ĐÁNH GIÁ THỰC CHẤT</div>
+  <div class="el node dark" data-a="pop" data-d="1.2" style="left:440px;top:730px;width:200px;height:200px;font-size:22px">RÚT KINH NGHIỆM</div>
+  <div class="el node dark" data-a="pop" data-d="1.4" style="left:210px;top:500px;width:200px;height:200px;font-size:22px">ĐỔI MỚI NỘI DUNG, PHƯƠNG PHÁP</div>
+
+  <div class="el t-pale up" data-a="up" data-d="1.2" style="left:1060px;top:280px;font:600 26px/1.3 'Be Vietnam Pro';letter-spacing:.14em">TIÊU CHÍ ĐÁNH GIÁ</div>
+  <div class="el bul" data-a="left" data-d="1.4" style="left:1060px;top:340px;width:760px">Năng lực xử lý tình huống thực tế</div>
+  <div class="el bul" data-a="left" data-d="1.55" style="left:1060px;top:420px;width:760px">Bản lĩnh, kỷ luật của cán bộ, chiến sĩ</div>
+  <div class="el bul" data-a="left" data-d="1.7" style="left:1060px;top:500px;width:760px">Khả năng chỉ huy và hiệp đồng</div>
+  <div class="el bul" data-a="left" data-d="1.85" style="left:1060px;top:580px;width:760px">Không chỉ căn cứ điểm số hay kết quả hoàn thành nội dung</div>
+  <div class="el pf sh-sm" data-a="up" data-d="2.2" style="left:1060px;top:700px;width:760px"><span class="t-pale" style="font-weight:700;font-style:italic;font-size:32px;line-height:1.35">Sau mỗi đợt: chỉ rõ ưu điểm - hạn chế - nguyên nhân - giải pháp khắc phục</span></div>
+</section>
+
+<!-- =====================================================
+     13 · GIẢI PHÁP 06 – KHOA HỌC CÔNG NGHỆ
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="III">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_ffa.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">GIẢI PHÁP 06</span>
+    <span class="tt t-gold sh-lg">ỨNG DỤNG KHOA HỌC CÔNG NGHỆ, HIỆN ĐẠI HÓA</span>
+  </div>
+  <div class="el" data-a="zoom" data-d=".4" style="left:100px;top:240px;width:550px;height:340px;border-radius:12px;box-shadow:var(--glow)"></div>
+  <div class="el" data-a="zoom" data-d=".6" style="left:690px;top:240px;width:550px;height:340px;border-radius:12px;box-shadow:var(--glow)"></div>
+  <div class="el" data-a="zoom" data-d=".8" style="left:1280px;top:240px;width:550px;height:340px;border-radius:12px;box-shadow:var(--glow)"></div>
+  <img class="el" data-a="zoom" data-d=".4" src="assets/photo13a.jpg" alt="" style="left:82px;top:222px;width:586px;height:376px;clip-path:inset(18px round 12px)">
+  <img class="el" data-a="zoom" data-d=".6" src="assets/photo13b.jpg" alt="" style="left:672px;top:222px;width:586px;height:376px;clip-path:inset(18px round 12px)">
+  <img class="el" data-a="zoom" data-d=".8" src="assets/photo13c.jpg" alt="" style="left:1262px;top:222px;width:586px;height:376px;clip-path:inset(18px round 12px)">
+  <div class="el card glass" data-a="up" data-d="1" style="left:100px;top:610px;width:550px;height:257px">
+    <div class="h t-pale" style="margin-top:0">Công nghệ mô phỏng,<br>thực tế ảo</div><div class="p">Nâng cao tư duy, khả năng xử lý tình huống trong môi trường an toàn.</div>
+  </div>
+  <div class="el card glass" data-a="up" data-d="1.15" style="left:690px;top:610px;width:550px;height:257px">
+    <div class="h t-pale" style="margin-top:0">Phần mềm xây dựng<br>tình huống</div><div class="p">Đa dạng hóa kịch bản, tăng yếu tố bất ngờ trong huấn luyện, diễn tập.</div>
+  </div>
+  <div class="el card glass" data-a="up" data-d="1.3" style="left:1280px;top:610px;width:550px;height:257px">
+    <div class="h t-pale" style="margin-top:0">Thao trường, trang thiết bị đồng bộ</div><div class="p">Ưu tiên hạng mục thiết yếu, trực tiếp phục vụ nhiệm vụ chiến đấu.</div>
+  </div>
+</section>
+
+<!-- =====================================================
+     14 · GIẢI PHÁP 07 – CHIẾN SĨ TOÀN DIỆN
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="III">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_22c.jpg);opacity:.16"></div>
+  <div class="el halo breathe" style="left:560px;top:180px;width:800px;height:800px;opacity:.55"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">GIẢI PHÁP 07</span>
+    <span class="tt t-gold sh-lg">XÂY DỰNG NGƯỜI CHIẾN SĨ ĐẶC NHIỆM TOÀN DIỆN</span>
+  </div>
+  <img class="el" data-a="up" data-d=".3" src="assets/soldier14.png" alt="" style="left:613px;top:168px;width:706px;height:912px">
+
+  <div class="el cell row" data-a="left" data-d=".8" style="left:100px;top:270px;width:460px;height:139px"><div class="n mont t-gold">01</div><div style="color:#f3c653"><span data-icon="flag"></span><div class="t" style="color:var(--cream)">Bản lĩnh chính trị vững vàng</div></div></div>
+  <div class="el cell row" data-a="left" data-d=".95" style="left:100px;top:479px;width:460px;height:139px"><div class="n mont t-gold">02</div><div style="color:#f3c653"><span data-icon="person"></span><div class="t" style="color:var(--cream)">Thể lực tốt</div></div></div>
+  <div class="el cell row" data-a="left" data-d="1.1" style="left:100px;top:688px;width:460px;height:139px"><div class="n mont t-gold">03</div><div style="color:#f3c653"><span data-icon="doc"></span><div class="t" style="color:var(--cream)">Chuyên môn giỏi</div></div></div>
+  <div class="el cell row" data-a="right" data-d="1.25" style="left:1360px;top:374px;width:460px;height:139px"><div class="n mont t-gold">04</div><div style="color:#f3c653"><span data-icon="shield"></span><div class="t" style="color:var(--cream)">Ý chí kiên cường</div></div></div>
+  <div class="el cell row" data-a="right" data-d="1.4" style="left:1360px;top:584px;width:460px;height:139px"><div class="n mont t-gold">05</div><div style="color:#f3c653"><span data-icon="clock36"></span><div class="t" style="color:var(--cream)">Chịu được áp lực cao</div></div></div>
+  <div class="el" data-a="fade" data-d="1.7" style="left:1360px;top:800px;width:460px;height:93px;border-left:6px solid rgba(255,255,255,.18);padding-left:16px;font:500 22px/1.4 'Be Vietnam Pro';opacity:.85">Bảo đảm quân số, thời gian, kinh phí, CSVC; kết hợp chuyên môn với chính trị, thể lực, võ thuật, điều lệnh, kỷ luật</div>
+</section>
+
+<!-- =====================================================
+     15 · NGUYÊN TẮC "NĂM LẤY"
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="III">
+  <div class="bg" style="background-image:url(assets/nenB.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_7ac.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">NGUYÊN TẮC TRIỂN KHAI</span>
+    <span class="tt t-gold sh-lg">TRIỂN KHAI ĐỒNG BỘ – “NĂM LẤY”</span>
+  </div>
+  <div class="el block" data-a="drop" data-d=".4" style="left:200px;top:240px;width:1520px;height:110px;background:var(--pale);box-shadow:var(--glow)">
+    <div class="k">THƯỚC ĐO CAO NHẤT</div>
+    <div class="v"><span data-icon="chevL"></span>Lấy hiệu quả thực hiện nhiệm vụ<span data-icon="chevR"></span></div>
+  </div>
+  <div class="el card dark" data-a="up" data-d=".9" style="left:200px;top:380px;width:487px;height:300px;border:1.5px solid rgba(255,248,230,.28)"><div class="h t-pale">TRUNG TÂM</div><div class="p">Lấy con người làm trung tâm</div></div>
+  <div class="el card dark" data-a="up" data-d="1.05" style="left:717px;top:380px;width:487px;height:300px;border:1.5px solid rgba(255,248,230,.28)"><div class="h t-pale">THEN CHỐT</div><div class="p">Lấy chỉ huy và hiệp đồng làm then chốt</div></div>
+  <div class="el card dark" data-a="up" data-d="1.2" style="left:1233px;top:380px;width:487px;height:300px;border:1.5px solid rgba(255,248,230,.28)"><div class="h t-pale">ĐỘNG LỰC</div><div class="p">Lấy khoa học công nghệ làm động lực</div></div>
+  <div class="el block" data-a="up" data-d="1.6" style="left:200px;top:710px;width:1520px;height:110px;background:#fbf6ea;border:3px solid #f3c653">
+    <div class="k">NỀN TẢNG</div>
+    <div class="v"><span data-icon="chevL"></span>Lấy huấn luyện thực tiễn<span data-icon="chevR"></span></div>
+  </div>
+  <div class="el stars" data-a="wipe" data-d="2" style="left:600px;top:860px;width:720px"></div>
+</section>
+
+<!-- =====================================================
+     16 · KIẾN NGHỊ, ĐỀ XUẤT
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="IV">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg" style="background-image:url(assets/img_410.jpg);opacity:.16"></div>
+
+  <div class="el ptitle" data-a="left">
+    <span class="lb t-pale">IV. KIẾN NGHỊ, ĐỀ XUẤT</span>
+    <span class="tt t-gold sh-lg">KIẾN NGHỊ VỚI ĐẢNG ỦY, LÃNH ĐẠO BỘ TƯ LỆNH</span>
+  </div>
+  <div class="el card cream" data-a="zoom" data-d=".4" style="left:100px;top:240px;width:840px;height:340px">
+    <div class="badge">01</div><div class="h">Tổ chức tập huấn, diễn tập chuyên sâu,<br>liên lực lượng</div><div class="p">Tạo điều kiện trao đổi kinh nghiệm, kiểm tra khả năng phối hợp, nâng cao năng lực tổ chức thực hiện.</div>
+  </div>
+  <div class="el card cream" data-a="zoom" data-d=".6" style="left:980px;top:240px;width:840px;height:340px">
+    <div class="badge">02</div><div class="h">Đầu tư thao trường, trang thiết bị, công nghệ mô phỏng</div><div class="p">Nâng cấp bãi tập, khu huấn luyện tổng hợp, mô hình học cụ; ứng dụng mô phỏng, thực tế ảo.</div>
+  </div>
+  <div class="el card cream" data-a="zoom" data-d=".8" style="left:100px;top:610px;width:840px;height:340px">
+    <div class="badge">03</div><div class="h">Cơ chế bảo đảm quân số, thời gian huấn luyện</div><div class="p">Duy trì huấn luyện chuyên sâu thường xuyên, liên tục; không gián đoạn, không hình thức.</div>
+  </div>
+  <div class="el card cream" data-a="zoom" data-d="1" style="left:980px;top:610px;width:840px;height:340px">
+    <div class="badge">04</div><div class="h">Xây dựng đội ngũ cán bộ huấn luyện, chỉ huy</div><div class="p">Chú trọng bồi dưỡng cán bộ trẻ, tạo nguồn kế cận đáp ứng yêu cầu xây dựng lực lượng.</div>
+  </div>
+</section>
+
+<!-- =====================================================
+     17 · QUYẾT TÂM THỰC HIỆN
+     ===================================================== -->
+<section class="slide" data-chrome="logo footer" data-prog="V">
+  <div class="el" style="left:860px;top:0;width:1060px;height:1080px;overflow:hidden"><img class="el kb" src="assets/photo17.jpg" alt="" style="inset:0;width:100%;height:100%;object-fit:cover"></div>
+  <div class="el" style="left:860px;top:0;width:760px;height:1080px;background:linear-gradient(90deg,#7a0a0f 10%,rgba(122,10,15,.5) 60%,rgba(122,10,15,0))"></div>
+  <div class="bg" style="background-image:url(assets/nenB.jpg);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 44%,transparent 64%);mask-image:linear-gradient(90deg,#000 0%,#000 44%,transparent 64%)"></div>
+
+  <div class="el t-pale up" data-a="up" style="left:100px;top:157px;font:600 26px/1.3 'Be Vietnam Pro';letter-spacing:.06em">V. QUYẾT TÂM THỰC HIỆN</div>
+  <div class="el mont sh-lg" data-a="left" style="left:100px;top:213px;width:700px"><span class="t-gold" style="font-weight:800;font-size:84px;line-height:1.08">CHÍNH QUY<br>TINH NHUỆ<br>HIỆN ĐẠI</span></div>
+  <div class="el stars" data-a="wipe" style="left:100px;top:508px;width:520px"></div>
+  <div class="el bul" data-a="left" style="left:100px;top:584px;width:820px">Đổi mới, nâng cao chất lượng huấn luyện</div>
+  <div class="el bul" data-a="left" style="left:100px;top:647px;width:820px">Siết chặt kỷ luật, tăng cường hiệp đồng</div>
+  <div class="el bul" data-a="left" style="left:100px;top:710px;width:820px">Khắc phục triệt để những hạn chế</div>
+  <div class="el bul" data-a="left" style="left:100px;top:773px;width:820px">Vững bản lĩnh, giỏi chuyên môn, tinh thông nghiệp vụ</div>
+  <div class="el tnr sh-sm" data-a="up" style="left:100px;top:836px;width:820px"><span class="t-pale" style="font-weight:700;font-style:italic;font-size:36px;line-height:1.15">Vì cuộc sống bình yên, hạnh phúc của Nhân dân</span></div>
+</section>
+
+<!-- =====================================================
+     18 · LỜI CẢM ƠN
+     ===================================================== -->
+<section class="slide">
+  <div class="bg" style="background-image:url(assets/nenA.jpg)"></div>
+  <div class="bg kb" style="background-image:url(assets/img_22c.jpg);opacity:.16"></div>
+  <div class="el dots" style="left:64px;top:126px"></div>
+  <div class="el dots" style="left:1700px;top:870px"></div>
+  <div class="el halo breathe" style="left:560px;top:-80px;width:800px;height:800px;opacity:.6"></div>
+
+  <img class="el" data-a="drop" data-d=".2" src="assets/badge.png" alt="Huy hiệu" style="left:883px;top:133px;width:154px;height:175px">
+  <div class="el mont c sh-lg" data-a="zoom" data-d=".7" style="left:160px;top:366px;width:1600px"><span class="t-gold" style="font-weight:800;font-size:104px;line-height:1.22">XIN TRÂN TRỌNG CẢM ƠN!</span></div>
+  <div class="el stars" data-a="wipe" data-d="1.2" style="left:580px;top:517px;width:760px"></div>
+  <div class="el pf c sh-sm" data-a="up" data-d="1.5" style="left:310px;top:595px;width:1300px"><span class="t-pale" style="font-weight:700;font-style:italic;font-size:38px;line-height:1.35">Kính chúc các đồng chí lãnh đạo, các đồng chí đại biểu sức khỏe, <br>hạnh phúc và thành công</span></div>
+  <div class="el c up" data-a="fade" data-d="2" style="left:160px;top:721px;width:1600px;font:600 26px/1.3 'Be Vietnam Pro';letter-spacing:.08em">CHÚC HỘI NGHỊ THÀNH CÔNG TỐT ĐẸP!</div>
+</section>
+
+</div>
+<div id="hud"></div><div id="bar"></div>
+<script src="deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+{
+  "fileKey": "19K1M6yfGbXw8zi2aVo7KR",
+  "assets": {
+    "nenA.jpg": {
+      "mode": "render",
+      "node": "133:11936",
+      "format": "jpg",
+      "scale": 1
+    },
+    "nenB.jpg": {
+      "mode": "render",
+      "node": "133:12000",
+      "format": "jpg",
+      "scale": 1
+    },
+    "nen1.jpg": {
+      "mode": "render",
+      "node": "133:12209",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_s1.jpg": {
+      "mode": "render",
+      "node": "133:12210",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_22c.jpg": {
+      "mode": "render",
+      "node": "133:11909",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_fc8.jpg": {
+      "mode": "render",
+      "node": "133:12044",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_9a1.jpg": {
+      "mode": "render",
+      "node": "133:12054",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_ffa.jpg": {
+      "mode": "render",
+      "node": "133:11937",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_7ac.jpg": {
+      "mode": "render",
+      "node": "133:12029",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_410.jpg": {
+      "mode": "render",
+      "node": "133:12166",
+      "format": "jpg",
+      "scale": 1
+    },
+    "img_8ad.jpg": {
+      "mode": "render",
+      "node": "133:12011",
+      "format": "jpg",
+      "scale": 1
+    },
+    "medal11989.jpg": {
+      "mode": "render",
+      "node": "133:11989",
+      "format": "jpg",
+      "scale": 2
+    },
+    "medal11992.jpg": {
+      "mode": "render",
+      "node": "133:11992",
+      "format": "jpg",
+      "scale": 2
+    },
+    "medal11995.jpg": {
+      "mode": "render",
+      "node": "133:11995",
+      "format": "jpg",
+      "scale": 2
+    },
+    "photo8a.jpg": {
+      "mode": "render",
+      "node": "133:12021",
+      "format": "jpg",
+      "scale": 2
+    },
+    "photo8b.jpg": {
+      "mode": "render",
+      "node": "133:12023",
+      "format": "jpg",
+      "scale": 2
+    },
+    "photo8c.jpg": {
+      "mode": "render",
+      "node": "133:12024",
+      "format": "jpg",
+      "scale": 2
+    },
+    "photo13a.jpg": {
+      "mode": "render",
+      "node": "133:12108",
+      "format": "jpg",
+      "scale": 2
+    },
+    "photo13b.jpg": {
+      "mode": "render",
+      "node": "133:12110",
+      "format": "jpg",
+      "scale": 2
+    },
+    "photo13c.jpg": {
+      "mode": "render",
+      "node": "133:12112",
+      "format": "jpg",
+      "scale": 2
+    },
+    "photo17.jpg": {
+      "mode": "render",
+      "node": "133:12176",
+      "format": "jpg",
+      "scale": 1.5
+    },
+    "soldier3.png": {
+      "mode": "fill",
+      "node": "133:11934"
+    },
+    "soldier14.png": {
+      "mode": "fill",
+      "node": "133:12129"
+    },
+    "badge.png": {
+      "mode": "fill",
+      "node": "133:12201"
+    },
+    "star_gold.png": {
+      "mode": "fill",
+      "node": "I133:11970;9:60"
+    },
+    "star_bullet.png": {
+      "mode": "fill",
+      "node": "I133:12187;9:69"
+    },
+    "logo_badge.png": {
+      "mode": "fill",
+      "node": "I133:12243;25:2227"
+    }
+  }
+}
