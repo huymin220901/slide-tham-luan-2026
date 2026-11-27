@@ -84,7 +84,6 @@ function go(n, force) {
   cur = n;
   hud.textContent = `${n + 1} / ${slides.length}`;
   bar.style.width = ((n + 1) / slides.length * 100) + '%';
-  try { history.replaceState(null, '', '#' + (n + 1)); } catch (e) {}
 }
 addEventListener('keydown', e => {
   if (['ArrowRight', 'PageDown', ' ', 'Enter', 'ArrowDown'].includes(e.key)) { e.preventDefault(); go(cur + 1); }
@@ -100,8 +99,9 @@ addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive: true});
 addEventListener('touchend', e => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); tx = null; });
 let hudT; addEventListener('mousemove', () => { document.body.classList.add('show-hud'); clearTimeout(hudT); hudT = setTimeout(() => document.body.classList.remove('show-hud'), 1800); });
 
-const start = parseInt(location.hash.slice(1)) - 1;
-cur = isNaN(start) ? 0 : Math.max(0, Math.min(slides.length - 1, start));
+/* Mở link (hoặc tải lại trang) luôn bắt đầu từ slide đầu tiên */
+cur = 0;
+if (location.hash) { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {} }
 
 /* --- Tải trước toàn bộ ảnh + font rồi mới bắt đầu, để khi trình chiếu không bị giật --- */
 (async function preload() {

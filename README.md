@@ -12,7 +12,7 @@ Mở `index.html` bằng Chrome, Edge hoặc Safari. Máy cần có mạng để
 | Home · End | Về slide đầu · tới slide cuối |
 
 Bút trình chiếu (presenter) dùng được luôn vì nó gửi phím PageUp/PageDown.
-Muốn mở thẳng một slide, thêm `#số` vào cuối đường dẫn, ví dụ `index.html#7`.
+Mở link hoặc tải lại trang luôn bắt đầu từ slide 1. Muốn nhảy nhanh tới slide cuối, bấm End.
 
 ## Các file
 
