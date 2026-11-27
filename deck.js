@@ -102,4 +102,26 @@ let hudT; addEventListener('mousemove', () => { document.body.classList.add('sho
 
 const start = parseInt(location.hash.slice(1)) - 1;
 cur = isNaN(start) ? 0 : Math.max(0, Math.min(slides.length - 1, start));
-go(cur, true);
+
+/* --- Tải trước toàn bộ ảnh + font rồi mới bắt đầu, để khi trình chiếu không bị giật --- */
+(async function preload() {
+  const loader = document.getElementById('loader');
+  const urls = new Set();
+  stage.querySelectorAll('img').forEach(i => urls.add(i.getAttribute('src')));
+  stage.querySelectorAll('[style*="url("]').forEach(el => {
+    const m = el.getAttribute('style').match(/url\(([^)]+)\)/); if (m) urls.add(m[1].replace(/["']/g, ''));
+  });
+  ['assets/star_bullet.png', 'assets/star_gold.png'].forEach(u => urls.add(u));
+  const list = [...urls]; let done = 0; const kept = window.__preloaded = [];
+  const bar = loader && loader.querySelector('i');
+  const tick = () => { done++; if (bar) bar.style.width = (done / list.length * 100) + '%'; };
+  const load = u => new Promise(res => {
+    const im = new Image(); im.src = u; kept.push(im);
+    (im.decode ? im.decode() : new Promise((ok, no) => { im.onload = ok; im.onerror = no; }))
+      .catch(() => {}).then(() => { tick(); res(); });
+  });
+  const timeout = new Promise(res => setTimeout(res, 15000)); /* mạng chậm: tối đa 15 giây rồi vẫn chạy */
+  await Promise.race([Promise.all([...list.map(load), document.fonts ? document.fonts.ready : null]), timeout]);
+  if (loader) { loader.classList.add('done'); setTimeout(() => loader.remove(), 700); }
+  go(cur, true);
+})();

@@ -170,3 +170,10 @@ body.static .slide{transition:none}
 .prog b.now{background:var(--g1h);color:#7a0a0f;border-color:#fbe39a;box-shadow:0 0 14px rgba(246,208,106,.8)}
 .slide.active .prog b.now{animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{50%{box-shadow:0 0 26px rgba(246,208,106,1)}}
+
+/* ---------- Màn hình tải trước ---------- */
+#loader{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#5a0607;transition:opacity .6s ease}
+#loader.done{opacity:0;pointer-events:none}
+#loader .lt{font:600 14px/1 "Be Vietnam Pro",sans-serif;letter-spacing:.2em;color:#f3c653}
+#loader .lb{width:min(320px,60vw);height:3px;background:rgba(243,198,83,.2);border-radius:2px;overflow:hidden}
+#loader .lb i{display:block;height:100%;width:0;background:#f3c653;transition:width .2s ease}

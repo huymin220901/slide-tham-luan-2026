@@ -30,9 +30,22 @@ def get(url):
 
 def save(name, url):
     data = urllib.request.urlopen(url, timeout=300).read()
-    with open(os.path.join(HERE, 'assets', name), 'wb') as f:
-        f.write(data)
-    print(f'  ✓ {name}  ({len(data)//1024} KB)')
+    dest = os.path.join(HERE, 'assets', name)
+    if name.endswith('.avif'):
+        # Ảnh .avif (nhẹ hơn nhiều): tải bản gốc rồi nén bằng công cụ sips có sẵn trên macOS
+        import subprocess, tempfile
+        with tempfile.NamedTemporaryFile(suffix='.png', delete=False) as t:
+            t.write(data)
+        cmd = ['sips', '-s', 'format', 'avif', '-s', 'formatOptions', '55']
+        if name.startswith('soldier'):
+            # Ảnh tách nền: thu về tối đa 1400px trước khi nén, nếu không sips có thể làm mất nền trong suốt
+            cmd = ['sips', '-Z', '1400', '-s', 'format', 'avif', '-s', 'formatOptions', '75']
+        subprocess.run(cmd + [t.name, '--out', dest], check=True, capture_output=True)
+        os.unlink(t.name)
+    else:
+        with open(dest, 'wb') as f:
+            f.write(data)
+    print(f'  ✓ {name}  ({os.path.getsize(dest)//1024} KB)')
 
 only = set(sys.argv[1:])
 items = {k: v for k, v in CFG['assets'].items() if not only or k in only}

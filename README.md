@@ -63,6 +63,10 @@ Mỗi phần tử có hiệu ứng mang thuộc tính `data-a="…"`:
    Muốn tải lại chỉ vài ảnh thì ghi tên file sau lệnh, ví dụ `python3 cap-nhat-anh-tu-figma.py photo8a.jpg`.
 
 **Cách 2, thay trực tiếp:** chép ảnh mới vào `assets/` với **đúng tên cũ** (xem bảng trong `figma-assets.json`).
+Ảnh nền và ảnh chiến sĩ dùng định dạng `.avif` cho nhẹ. Nếu ảnh mới là JPG/PNG, chuyển sang AVIF bằng lệnh (thay tên file cho đúng):
+```bash
+sips -s format avif -s formatOptions 60 anh-moi.jpg --out assets/nenA.avif
+```
 
 **Ảnh chân dung slide 2:** khung đang để trống. Chèn ảnh bằng cách thay khối có `portrait-photo` trong `index.html` bằng:
 ```html

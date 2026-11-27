@@ -1,67 +1,67 @@
 {
   "fileKey": "19K1M6yfGbXw8zi2aVo7KR",
   "assets": {
-    "nenA.jpg": {
+    "nenA.avif": {
       "mode": "render",
       "node": "133:11936",
       "format": "jpg",
       "scale": 1
     },
-    "nenB.jpg": {
+    "nenB.avif": {
       "mode": "render",
       "node": "133:12000",
       "format": "jpg",
       "scale": 1
     },
-    "nen1.jpg": {
+    "nen1.avif": {
       "mode": "render",
       "node": "133:12209",
       "format": "jpg",
       "scale": 1
     },
-    "img_s1.jpg": {
+    "img_s1.avif": {
       "mode": "render",
       "node": "133:12210",
       "format": "jpg",
       "scale": 1
     },
-    "img_22c.jpg": {
+    "img_22c.avif": {
       "mode": "render",
       "node": "133:11909",
       "format": "jpg",
       "scale": 1
     },
-    "img_fc8.jpg": {
+    "img_fc8.avif": {
       "mode": "render",
       "node": "133:12044",
       "format": "jpg",
       "scale": 1
     },
-    "img_9a1.jpg": {
+    "img_9a1.avif": {
       "mode": "render",
       "node": "133:12054",
       "format": "jpg",
       "scale": 1
     },
-    "img_ffa.jpg": {
+    "img_ffa.avif": {
       "mode": "render",
       "node": "133:11937",
       "format": "jpg",
       "scale": 1
     },
-    "img_7ac.jpg": {
+    "img_7ac.avif": {
       "mode": "render",
       "node": "133:12029",
       "format": "jpg",
       "scale": 1
     },
-    "img_410.jpg": {
+    "img_410.avif": {
       "mode": "render",
       "node": "133:12166",
       "format": "jpg",
       "scale": 1
     },
-    "img_8ad.jpg": {
+    "img_8ad.avif": {
       "mode": "render",
       "node": "133:12011",
       "format": "jpg",
@@ -127,11 +127,11 @@
       "format": "jpg",
       "scale": 1.5
     },
-    "soldier3.png": {
+    "soldier3.avif": {
       "mode": "fill",
       "node": "133:11934"
     },
-    "soldier14.png": {
+    "soldier14.avif": {
       "mode": "fill",
       "node": "133:12129"
     },
